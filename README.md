@@ -20,5 +20,5 @@ Video Link- https://drive.google.com/file/d/1q0Y3h_lybRqjeA7iZORsaJsVE2StBlSD/vi
 
 This information is available in the technical document of the project. The technical document can be downloaded from this link -
 
-TechincalDocument- https://drive.google.com/file/d/1SHslZATaT86kOY1SoQvWdl8vpg9QmA9Q/view?usp=sharing
+TechincalDocument- https://drive.google.com/file/d/1SHslZATaT86kOY1SoQvWdl8vpg9QmA9Q/view?usp=sharing 
 Hope you Enjoy the Application!
