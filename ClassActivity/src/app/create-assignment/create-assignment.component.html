@@ -1,0 +1,57 @@
+<div class = "quizcard">
+    <mat-card>
+    <mat-card-content>
+    <form>
+        <mat-form-field class = "full-width">
+            <input [(ngModel)]="question.text" name="ques" matInput placeholder = "Question" required/>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input [(ngModel)]="question.correctAnswer" name="correctAnswer" matInput placeholder = "Correct Answer" required/>
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field>
+            <input [(ngModel)]="question.wrongAnswer1" name="wrongAnswer1" matInput placeholder = "Wrong Answer" required/>
+        </mat-form-field>
+        
+        <br> 
+        <mat-form-field>
+            <input [(ngModel)]="question.wrongAnswer2" name="wrongAnswer2" matInput placeholder = "Wrong Answer" required/>
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field>
+            <input [(ngModel)]="question.wrongAnswer3" name="wrongAnswer3" matInput placeholder = "Wrong Answer" required />
+        </mat-form-field>
+
+        <br><br>
+        <button mat-raised-button color="accent" (click)="post(question)" [disabled]="!isValid()">POST</button>
+    </form>
+
+    </mat-card-content>
+
+    
+        
+   
+    </mat-card>
+<div>
+
+    <div class = "titlecard">
+        <div class="titlecontainer">
+            CLASS ACTIVITY
+        </div>
+      </div>
+      
+      
+      <div class="card">
+          <div class="container">
+            <button mat-raised-button color="primary" (click)="createSurvey()">Create Survey</button>
+            <br><br>
+            <br><br>
+            <button mat-raised-button color="accent" (click)="takeSurvey()">Take Survey</button>
+            <br><br>
+            <br><br>
+            <button mat-raised-button color="warn" (click)="logout()">Log Out</button>
+        </div>
+      </div>

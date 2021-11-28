@@ -1,0 +1,40 @@
+<div class = "quizcard">
+  <mat-card>
+    <mat-card-content>
+    <form>
+     <mat-list *ngFor="let question of quizList.slice().reverse(); let i=index" >
+            <mat-list-item class="clickLink" *ngIf="i<5">{{question.text}}</mat-list-item>
+    
+            <br><br>
+            <mat-radio-group [(ngModel)]="question.submittedAnswer" name="submittedAnswer" *ngFor="let ans of question.answers">
+              <mat-radio-button class="full-width" [value]="ans">{{ans}}</mat-radio-button><br><br><br>
+            </mat-radio-group>
+          </mat-list> 
+    </form>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="finishQuiz()" [disabled]="!isValid()">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+      <div class = "titlecard">
+        <div class="titlecontainer">
+            CLASS ACTIVITY
+        </div>
+      </div>
+      
+      
+      <div class="card">
+          <div class="container">
+            <button mat-raised-button color="primary" (click)="createSurvey()">Create Survey</button>
+            <br><br>
+            <br><br>
+            <button mat-raised-button color="accent" (click)="takeSurvey()">Take Survey</button>
+            <br><br>
+            <br><br>
+            <button mat-raised-button color="warn" (click)="logout()">Log Out</button>
+        </div>
+      </div>
+      

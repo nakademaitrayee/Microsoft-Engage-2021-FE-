@@ -1,0 +1,37 @@
+<div class = "quizcard">
+    <mat-card>
+    <mat-card-content>
+    <form>
+        <div  class="empty" *ngIf="quizList.length == 0">
+            <p>No Test As Of Now!!</p>
+        </div>
+        <mat-list *ngFor="let question of quizList.slice().reverse(); let i=index" >
+                <mat-list-item class="clickLink" [routerLink]="['/play',question.id]" *ngIf="i<5" (click)="api.selectQuestion(question)">{{question.text}}</mat-list-item>
+        </mat-list>    
+    </form>
+
+    </mat-card-content>
+
+    <button mat-raised-button color="accent" (click)="goToQuizzes()">Take All Surveys</button>
+    </mat-card>
+</div>
+
+      <div class = "titlecard">
+        <div class="titlecontainer">
+            CLASS ACTIVITY
+        </div>
+      </div>
+      
+      
+      <div class="card">
+          <div class="container">
+            <button mat-raised-button color="primary" (click)="createSurvey()">Create Survey</button>
+            <br><br>
+            <br><br>
+            <button mat-raised-button color="accent" (click)="takeSurvey()">Take Survey</button>
+            <br><br>
+            <br><br>
+            <button mat-raised-button color="warn" (click)="logout()">Log Out</button>
+        </div>
+      </div>
+      

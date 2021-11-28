@@ -1,0 +1,72 @@
+<div class = "quizcard">
+    <mat-card>
+    <mat-card-content>
+    <form>
+        <hr color="black">
+        <br>
+        <div class="empty">
+            <p>Result Summary</p> 
+        </div>
+        <br>
+        <hr color="black">
+        <mat-list *ngFor="let question of quizList.slice().reverse(); let i=index" >
+        <table>
+            <tr>
+              <th>Options</th>
+              <th>Attempts Made</th>
+            </tr>
+            <tr>
+              <td class="correct">{{question.correctAnswer}}</td>
+              <td>{{question.c1}}</td>
+            </tr>
+            <tr>
+            <td class="wrong">{{question.wrongAnswer1}}</td>
+            <td>{{question.w1}}</td>
+            </tr>
+            <tr>
+            <td class="wrong">{{question.wrongAnswer2}}</td>
+            <td>{{question.w2}}</td>
+            </tr>
+            <tr>
+            <td class="wrong">{{question.wrongAnswer3}}</td>
+            <td>{{question.w3}}</td>
+            </tr>
+          </table>
+
+         <br><br>
+          <p class="percentage">Correct Answer of the Question      -  {{question.correctAnswer}}</p>
+         <br>
+          <p class="percentage">Percentage of Correct Attempts      -  {{percentageCorrect}} % </p>
+      
+        </mat-list>
+
+        
+    </form>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+        
+    </mat-card-actions>
+    </mat-card>
+</div>
+
+      <div class = "titlecard">
+        <div class="titlecontainer">
+            CLASS ACTIVITY
+        </div>
+      </div>
+      
+      
+      <div class="card">
+          <div class="container">
+            <button mat-raised-button color="primary" (click)="createSurvey()">Create Survey</button>
+            <br><br>
+            <br><br>
+            <button mat-raised-button color="accent" (click)="takeSurvey()">Take Survey</button>
+            <br><br>
+            <br><br>
+            <button mat-raised-button color="warn" (click)="logout()">Log Out</button>
+        </div>
+      </div>
+      
